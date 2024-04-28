@@ -1,0 +1,45 @@
+{
+    "manifest_version": 3,
+    "name": "Code Block Beautifier for Jira",
+    "version": "1.1",
+    "description": "Wraps selected text with <code> tags in different colors and automatically inserts it",
+    "permissions": ["activeTab", "contextMenus", "scripting"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "commands": {
+      "wrap-red": {
+        "suggested_key": {
+          "default": "Alt+Shift+R",
+          "mac": "Command+Shift+R"
+        },
+        "description": "Wrap selected text with <code:red>"
+      },
+      "wrap-green": {
+        "suggested_key": {
+          "default": "Alt+Shift+G",
+          "mac": "Command+Shift+G"
+        },
+        "description": "Wrap selected text with <code:green>"
+      },
+      "wrap-blue": {
+        "suggested_key": {
+          "default": "Alt+Shift+B",
+          "mac": "Command+Shift+B"
+        },
+        "description": "Wrap selected text with <code:blue>"
+      }
+    },
+    "icons": {
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  }

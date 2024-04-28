@@ -1,1 +1,1 @@
-# code-wrapper-extension
+# Code-Block-Beautifier-for-Jira
