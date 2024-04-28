@@ -11,7 +11,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   });
   
   function wrapText(text, color) {
-    var wrappedText = "{color:" + color + "}" + text + "{code}";
+    var wrappedText = "<color:" + color + ">" + text + "</color>";
     return wrappedText;
   }
   
