@@ -14,11 +14,11 @@ chrome.contextMenus.create({
     chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
       var tab = tabs[0];
       var color = "";
-      if (command === "wrap-red") {
+      if (command === "wrapred") {
         color = "red";
-      } else if (command === "wrap-green") {
+      } else if (command === "wrapgreen") {
         color = "green";
-      } else if (command === "wrap-blue") {
+      } else if (command === "wrapblue") {
         color = "blue";
       }
       chrome.tabs.sendMessage(tab.id, { action: "wrapText", color: color });
